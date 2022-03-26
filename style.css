@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(206, 206, 206);
+    font-family: 'PT Sans', sans-serif;
+}
+img {
+    width: 300px;
+    
+}
+
+/* HEADER */
+
+.title h1 {
+    padding: 20px 0px;
+    text-align: center;
+    font-size: 2.9em;
+    text-transform: uppercase;
+    
+}
+
+.container {
+    background-color: rgb(228, 223, 216);
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em auto;
+
+    display: grid;
+    gap: 1.6em;
+    grid-template-columns: repeat(5, 1fr) ;
+}
+
+.container > .header,
+.container > .content,
+.container > .sidebar,
+.container > .more,
+.container > .footer {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+}
+
+.container > .header,
+.container > .footer {
+    grid-column: 1/6;
+    background-color: #1e272e;
+    color: #fff;
+}
+
+.content > article {
+    background-color: #808e9b;
+    padding: 20px;
+    margin-top: 5px;
+    color: #dfe6e9;
+}
+
+.container > .content {
+    grid-column: span 3;
+}
+
+.container > .sidebar {
+    grid-column: span 2;
+    background-color: #485460;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.sidebar > p {
+    width: 300px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.content > .article h1,
+.content > .article p {
+    padding: 10px;
+}
+
+.container > .more {
+    background-color: #2d3436;
+    color: #fff;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+}
+
+.container > .footer h4 {
+    margin-bottom: 15px;
+}
+.more:hover {
+    background-color: #fff;
+    color: #2d3436;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 910px) {
+    .header {
+        text-align: center;
+    
+    }
+    .container .content {
+        grid-column: 1/6;
+
+    }
+    .container .sidebar {
+        grid-column: 1/6;
+        
+    }
+    img {
+        width: 600px;
+
+    }
+
+    .sidebar > p {
+        width: 600px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }    
+    .container .more {
+        grid-column: 1/6;
+    }
+
+@media screen and (max-width: 712px) {
+        .header {
+            text-align: center;
+        
+        }
+        .container .content {
+            grid-column: 1/6;
+    
+        }
+        .container .sidebar {
+            grid-column: 1/6;
+            
+        }
+        img {
+            width: 400px;
+    
+        }
+    
+        .sidebar > p {
+            width: 400px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }    
+        .container .more {
+            grid-column: 1/6;
+        
+        }
